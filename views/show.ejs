@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/styles.css">
+    <title><%= post.title %></title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/posts">Home</a>
+        <a href="/posts/new">Create New Post</a>
+    </div>
+    <div class="container">
+        <h1><%= post.title %></h1>
+        <p><%= post.content %></p>
+        <a href="/posts/<%= post._id %>/edit"><button>Edit Post</button></a>
+        <form action="/posts/<%= post._id %>?_method=DELETE" method="POST" style="display: inline;">
+            <button style="background-color: #dc3545;">Delete Post</button>
+        </form>
+        <br><br>
+        <!-- Back Button -->
+        <a href="/posts"><button type="button">Back</button></a>
+    </div>
+</body>
+</html>

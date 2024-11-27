@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/styles.css">
+    <title>Blog Posts</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/posts">Home</a>
+        <a href="/posts/new">Create New Post</a>
+    </div>
+    <div class="container">
+        <h1>All Blog Posts</h1>
+        <ul>
+            <% posts.forEach(post => { %>
+                <li>
+                    <a href="/posts/<%= post._id %>"><%= post.title %></a>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html>

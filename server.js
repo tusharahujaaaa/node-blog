@@ -20,6 +20,10 @@ mongoose
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("Connection error:", err));
 
+
+  app.get("/", (req, res) => {
+    res.redirect("/posts");
+  });
 // Routes
 const postRoutes = require("./route/posts");
 app.use("/posts", postRoutes);

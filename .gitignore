@@ -21,6 +21,7 @@ yarn-error.log
 .settings/
 *.sublime-workspace
 /src/assets/video
+.env
 
 # Visual Studio Code
 .vscode/*

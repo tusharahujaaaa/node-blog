@@ -12,6 +12,7 @@ router.get("/", async (req, res) => {
 router.get("/new", (req, res) => {
   res.render("new");
 });
+//comment for dev branch 
 
 // CREATE: Add new post to database
 router.post("/", async (req, res) => {
